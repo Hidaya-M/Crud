@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="main.js"></script>
+  <title>Managment system</title>
+</head>
+<body>
+  <section class="crud">
+    <div class="head">
+      <h2>crud</h2>
+      <h4>product managment system</h4>
+    </div>
+    <div class="input">
+      <input onkeyup="getTotal" type="text"  id="title" placeholder="title">
+      <div class="price">
+        <input onkeyup="getTotal()" type="number"  id="price" placeholder="price">
+        <input onkeyup="getTotal()" type="number"  id="taxes" placeholder="taxes">
+        <input onkeyup="getTotal()"  type="number"  id="ads" placeholder="ads">
+        <input onkeyup="getTotal()" type="number"  id="discount" placeholder="discount">
+        <small  id="total"></small>
+      </div>
+      <input type="number"  id="count" placeholder="count">
+      <input type="text"  id="category" placeholder="category">
+      <button id="submit">Create</button>
+    </div>
+    <div class="output">
+      <div class="search-div">
+       <input type="text" onkeyup="searchByTandC(this.value)"  id="search" placeholder="Search">
+       <div class="search-btn">
+        <button onclick="getSearchMood(this.id)" id="searchTitle">search by title</button>
+        <button onclick="getSearchMood(this.id)" id="searchCategory">search by category</button>
+       </div>
+      </div>
+     <div id="delateAll">
+      
+     </div>
+      <table>
+        <tr>
+          <th>id</th>
+          <th>title</th>
+          <th>price</th>
+          <th>taxes</th>
+          <th>adds</th>
+          <th>discount</th>
+          <th>total</th>
+          <th>category</th>
+          <th>update</th>
+          <th>delate</th>
+        </tr>
+        <tbody id="tbody">
+     
+        </tbody>
+      </table>
+          
+   
+    </div>
+  </section>
+  
+</body>
+</html>
